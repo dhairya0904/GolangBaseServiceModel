@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service BeerService {
+rpc GetBeer(BeerRequest) returns (BeerResponse);
+}
+
+
+message BeerRequest {
+int32 number = 1;
+}
+
+message BeerResponse {
+repeated string beers = 1;
+}
